@@ -30,7 +30,7 @@ CREATE TABLE Orders (
 
 CREATE TABLE Order_Details (
   order_detail_id PRIMARY KEY,
-  order_id FOREIGN KEY REFERENCES Orders(order_id),
-  book_id FOREIGN KEY REFERENCES Books(book_id),
+  order_id FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+  book_id FOREIGN KEY (book_id) REFERENCES Books(book_id),
   quantity DOUBLE
 )
